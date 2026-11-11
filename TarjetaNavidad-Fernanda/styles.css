@@ -1,0 +1,38 @@
+.main-container {
+  position: relative;
+  width: 100%;
+  height: calc(100 * min(var(--vh, 1vh), 1vh));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.float-container {
+  margin-bottom: 1.5rem;
+}
+
+
+.cover-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+
+.photo-circle {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  margin-bottom: 1.5rem;
+}
+
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
