@@ -1,8 +1,7 @@
+<!DOCTYPE html> <!--Esta estiqueta declaro el tipo de documento-->
 <!-- Este desarrollo vamos a diseñar una tarjeta interactiva de Navidad-->
- <!--Nombre: Fernada Domínguez-->
- <!--Actividad 1-->
-
- <!DOCTYPE html> <!--Esta estiqueta declaro el tipo de documento-->
+<!--Nombre: Fernada Domínguez-->
+<!--Actividad 1-->
 <html lang="es">
 <head>
     <!--El titulo de la pagina no es visibles en el desarrollo pero es lo que funciona para el SEO-->
@@ -15,6 +14,11 @@ se adapte a diferentes dispositivos-->
   <meta name="description" content="Tarjeta de Navidad interactiva con diseño personalizado">
   <meta name="author" content="Fernanda Domínguez">
 
+  <!--Fuente Playfair Display que usa el CSS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
 
   <link rel="stylesheet" href="styles.css">
@@ -26,27 +30,29 @@ se adapte a diferentes dispositivos-->
    <!-- Cover -->
    <div class="page active" id="page-0">
     <div class="float-container">
-     <img src="Osito.jpg" alt="moño="cover-img">
+     <img src="Osito.jpg" alt="Portada navideña" class="cover-img">
     </div>
     <h1 class="cover-title">Feliz Navidad 2026🎅🏼🎄</h1>
     <p class="cover-subtitle">Con todo mi amor para ti! ❤️ </p>
+  
     <button id="btn-enter" class="btn-primary">
       <span class="btn-text">Click </span>
     </button>
    </div>
+
    <!--Mensaje pagina 1-->
    <div class="page" id="pagina1">
     <div class="photo-circle">
       <img class="photo-img" loading="lazy" src="moño rojo.png" alt="imagen de moño navideño">
     </div>
-    <p class="msg-text">FELICES FIESTAS, TE AMOO!! ❤️🎄
+    <p class="msg-text">FELICES FIESTAS, TE AMOO!! ❤️🎄</p>
     <button id="btn-next-1" class="btn-secondary">
       <span class="btn-text">Siguiente</span>
     </button>
    </div>
 
    <!--Mensaje pagina 2-->
- <div class="page" id="pagina2">
+   <div class="page" id="pagina2">
     <h2 class="gallery-title">EL MEJOR AÑO✨</h2>
     <div class="gallery-grid">
      <div class="gallery-item gold-border">
@@ -63,6 +69,47 @@ se adapte a diferentes dispositivos-->
     <p class="gallery-caption">Convivir este año contigo, fue increible
       ¡FELIZ NAVIDAD!✨ </p>
    </div>
+
+   <!--Boton para revelar un mensaje-->
+   <div class="page" id="pagina3">
+    <div class="float-container float">
+     <span class="heart-emoji">🎄✨</span> 
+    </div>
+    <p class="msg-text">¿Estan listos para descubrir que cuales son los deseos de esta Navidad?</p>
+    <button id="btn-reveal" class="btn-reveal">
+      <span class="btn-text">HO HO</span>
+    </button>
+   </div>
+  
+   <!--Mensaje final -->
+   <div class="page" id="pagina4">
+    <div id="final-card" class="final-card">
+     <audio id="navidad-audio" src="Audio Navideño.mp3"></audio>
+     <div class="photo-circle gold-border final-photo">
+      <img class="photo-img" loading="lazy" src="Merrycchrismas2.jpg" alt="merry christmas">
+     </div>
+     <h2 class="final-title">FELICES FIESTAS!</h2>
+     <p class="final-msg">Que esta navidad sea tan prospero, lleno de plenitud y amor</p>
+     <button id="btn-audio-ebc" class="btn-heart">
+      <span id="ebc-audio-btn-text">💗</span>
+     </button>
+    </div>
+    <div id="confetti-container" class="confetti-container"></div>
+   </div>
+
+ <!--Navegación de la tarjeta (fuera de las páginas para que se vea siempre)-->
+  <nav class="nav-container" aria-label="Navegación de páginas">
+    <button id="btn-prev" class="btn-nav" aria-label="Anterior">
+      <i data-lucide="chevron-left" class="icon-nav">‹</i>
+    </button>
+    <div id="dots" class="dots-container"></div>
+    <button id="btn-next" class="btn-nav" aria-label="Siguiente">
+      <i data-lucide="chevron-right" class="icon-nav">›</i>
+    </button>
+  </nav>
+
+ </div><!--Cierra main-container-->
+
 <script src="script.js"></script>
 </body>
 
